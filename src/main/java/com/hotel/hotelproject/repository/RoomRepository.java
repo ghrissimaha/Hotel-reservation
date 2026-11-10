@@ -1,0 +1,1 @@
+package com.hotel.hotelproject.repository; import com.hotel.hotelproject.model.Room; import org.springframework.data.jpa.repository.JpaRepository; public interface RoomRepository extends JpaRepository<Room,Long> { boolean existsByRoomTypeId(Long id);}

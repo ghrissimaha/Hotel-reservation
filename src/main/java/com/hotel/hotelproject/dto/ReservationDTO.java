@@ -1,0 +1,3 @@
+package com.hotel.hotelproject.dto;
+import com.hotel.hotelproject.model.ReservationStatus; import jakarta.validation.constraints.*; import java.math.BigDecimal; import java.time.*;
+public record ReservationDTO(Long id,@NotNull LocalDate checkInDate,@NotNull LocalDate checkOutDate,@NotNull ReservationStatus status,@NotNull BigDecimal totalPrice,LocalDateTime createdAt,@NotNull Long guestId,@NotNull Long roomId) { public ReservationDTO(Long i,LocalDate in,LocalDate out,ReservationStatus s,Long r,Long g){this(i,in,out,s,BigDecimal.ZERO,null,g,r);} public LocalDate checkIn(){return checkInDate;} public LocalDate checkOut(){return checkOutDate;} }

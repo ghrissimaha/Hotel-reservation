@@ -1,0 +1,1 @@
+package com.hotel.hotelproject.repository; import com.hotel.hotelproject.model.RoomType; import org.springframework.data.jpa.repository.JpaRepository; public interface RoomTypeRepository extends JpaRepository<RoomType,Long> {}

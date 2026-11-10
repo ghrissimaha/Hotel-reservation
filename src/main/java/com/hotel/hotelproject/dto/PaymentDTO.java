@@ -1,0 +1,3 @@
+package com.hotel.hotelproject.dto;
+import com.hotel.hotelproject.model.*; import jakarta.validation.constraints.*; import java.math.BigDecimal; import java.time.LocalDateTime;
+public record PaymentDTO(Long id,@NotNull @Positive BigDecimal amount,@NotNull PaymentMethod paymentMethod,@NotNull LocalDateTime paymentDate,@NotNull PaymentStatus status,@NotNull Long reservationId) { public PaymentDTO(Long i,BigDecimal a,PaymentStatus s,String m,LocalDateTime d,Long r){this(i,a,PaymentMethod.valueOf(m),d,s,r);} public PaymentDTO(Long i,BigDecimal a,PaymentStatus s,PaymentMethod m,LocalDateTime d,Long r){this(i,a,m,d,s,r);} public PaymentMethod method(){return paymentMethod;} public LocalDateTime paidAt(){return paymentDate;} }

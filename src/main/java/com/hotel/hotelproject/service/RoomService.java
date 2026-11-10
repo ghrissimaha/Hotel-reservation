@@ -1,0 +1,1 @@
+package com.hotel.hotelproject.service; import com.hotel.hotelproject.dto.*; import java.util.*; import java.time.LocalDate; public interface RoomService { List<RoomDTO> findAll(); RoomDTO findById(Long id); RoomDTO save(RoomDTO dto); void delete(Long id); List<RoomDTO> findAvailable(LocalDate in,LocalDate out); RoomDTO assignEmployee(Long roomId, Long employeeId); }

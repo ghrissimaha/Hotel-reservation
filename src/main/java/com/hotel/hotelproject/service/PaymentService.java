@@ -1,0 +1,1 @@
+package com.hotel.hotelproject.service; import com.hotel.hotelproject.dto.*; import java.util.*;  public interface PaymentService { List<PaymentDTO> findAll(); PaymentDTO findById(Long id); PaymentDTO save(PaymentDTO dto); void delete(Long id); PaymentDTO byReservation(Long reservationId); }

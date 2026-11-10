@@ -1,0 +1,1 @@
+package com.hotel.hotelproject.service; import com.hotel.hotelproject.dto.*; import java.util.*; public interface ReservationService { List<ReservationDTO> findAll(); ReservationDTO findById(Long id); ReservationDTO save(ReservationDTO dto); ReservationDTO cancel(Long id); void delete(Long id); List<ReservationDTO> byGuest(Long id); }
